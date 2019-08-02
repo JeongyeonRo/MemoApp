@@ -17,6 +17,8 @@
 		673577F822F2892A00566180 /* MemoVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673577F722F2892A00566180 /* MemoVO.swift */; };
 		673577FA22F2B19D00566180 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673577F922F2B19D00566180 /* MemoTableViewCell.swift */; };
 		673577FE22F2C5B200566180 /* sokcho.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 673577FD22F2C5B200566180 /* sokcho.jpeg */; };
+		67A40F3622F3C69E0038F8AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A40F3522F3C69E0038F8AC /* SWRevealViewController.m */; };
+		67A40F3822F3C8AB0038F8AC /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A40F3722F3C8AB0038F8AC /* SideBarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		673577F722F2892A00566180 /* MemoVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVO.swift; sourceTree = "<group>"; };
 		673577F922F2B19D00566180 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
 		673577FD22F2C5B200566180 /* sokcho.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sokcho.jpeg; sourceTree = "<group>"; };
+		67A40F3322F3C69C0038F8AC /* MemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		67A40F3422F3C69D0038F8AC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		67A40F3522F3C69E0038F8AC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		67A40F3722F3C8AB0038F8AC /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,10 @@
 				673577F322F2856B00566180 /* MemoReadViewController.swift */,
 				673577F722F2892A00566180 /* MemoVO.swift */,
 				673577F922F2B19D00566180 /* MemoTableViewCell.swift */,
+				67A40F3422F3C69D0038F8AC /* SWRevealViewController.h */,
+				67A40F3522F3C69E0038F8AC /* SWRevealViewController.m */,
+				67A40F3322F3C69C0038F8AC /* MemoApp-Bridging-Header.h */,
+				67A40F3722F3C8AB0038F8AC /* SideBarTableViewController.swift */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 				TargetAttributes = {
 					673577D922F2748000566180 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -151,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A40F3822F3C8AB0038F8AC /* SideBarTableViewController.swift in Sources */,
+				67A40F3622F3C69E0038F8AC /* SWRevealViewController.m in Sources */,
 				673577F822F2892A00566180 /* MemoVO.swift in Sources */,
 				673577FA22F2B19D00566180 /* MemoTableViewCell.swift in Sources */,
 				673577F422F2856B00566180 /* MemoReadViewController.swift in Sources */,
@@ -302,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +324,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjoen.MemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoApp/MemoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,6 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjoen.MemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoApp/MemoApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

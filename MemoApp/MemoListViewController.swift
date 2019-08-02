@@ -38,6 +38,21 @@ class MemoListViewController: UITableViewController {
         memo2.image = #imageLiteral(resourceName: "sokcho.jpeg")
         memo2.regdate = Date(timeIntervalSinceNow: 6000)
         appDelegate.memoList.append(memo2)
+        
+        //if 나 guard 구문에서 메소드의 실행 결과나 변수를 이용해서 상수를 생성하는 구문을 작성하면
+        //실행결과나 변수가 nil이면 {}안의 내용을 수행하지 않고
+        //nil이 아니면 수행
+        if let revealVC = self.revealViewController(){
+            
+            //let sideBarBtn = UIBarButtonItem(image: <#T##UIImage?#>, landscapeImagePhone: <#T##UIImage?#>, style: <#T##UIBarButtonItem.Style#>, target: <#T##Any?#>, action: <#T##Selector?#>)
+            let sideBarBtn = UIBarButtonItem()
+            sideBarBtn.image = UIImage(named: "sidemenu.png")
+            sideBarBtn.target = revealVC
+            sideBarBtn.action = #selector(revealVC.revealToggle(_ :))
+            self.navigationItem.leftBarButtonItem = sideBarBtn
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+        
     }
     
     //화면에 다시 출력될 때 호출되는 메소드
